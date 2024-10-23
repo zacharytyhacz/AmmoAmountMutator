@@ -5,4 +5,4 @@ Allows configuring of default weapon pickup ammo amount, ammo pickup amount, and
 ### Installation
 - Move all files in `System/` into your Unreal Tournament's `System/` folder.
 - **Optional:** Move the test map in `Maps/` into your Unreal Tournament's `Maps/` folder.
-- Edit the `AmmoAmountMutator.ini` to your liking.
+- Edit the `AmmoAmountMutator.ini` to your liking. Default ini has the true default values for UT weapons.
