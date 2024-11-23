@@ -1,2 +1,0 @@
-[Public]
-Object=(Name=AmmoAmountMutator.AmmoAmountMutator,Class=Class,MetaClass=Engine.Mutator,Description="Ammo Amount Mutator")

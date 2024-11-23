@@ -1,4 +1,4 @@
-class AmmoAmountMutator extends Mutator config(AmmoAmountMutator);
+class AmmoChangerDPV1 extends Mutator config(AmmoChangerDP);
 
 
 // Enforcer
@@ -134,14 +134,14 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     else if (Other.IsA('ShockRifle'))
     {
         WeaponPickup = Weapon(Other);
-        WeaponPickup.PickupAmmoCount = SniperWeaponPickupAmmoAmount;
+        WeaponPickup.PickupAmmoCount = ShockWeaponPickupAmmoAmount;
         return true;
     }
     else if (Other.IsA('ShockCore'))
     {
         AmmoPickup = Ammo(Other);
-        AmmoPickup.MaxAmmo = SniperMaxAmmoAmount;
-        AmmoPickup.AmmoAmount = SniperAmmoPickupAmount;
+        AmmoPickup.MaxAmmo = ShockMaxAmmoAmount;
+        AmmoPickup.AmmoAmount = ShockAmmoPickupAmount;
         return true;
     }
 
