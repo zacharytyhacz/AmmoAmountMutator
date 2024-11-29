@@ -96,12 +96,13 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = EnforcerWeaponPickupAmount;
-        return true;
+        return false;
     }
     else if (Other.IsA('EClip')) {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = MinigunEnforcerMaxAmmoAmount;
         AmmoPickup.AmmoAmount = EnforcerAmmoPickupAmount;
+        return false;
     }
 
     // minigun
@@ -109,25 +110,29 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = MinigunWeaponPickupAmmoAmount;
-        return true;
+        return false;
     }
     else if (Other.IsA('MiniAmmo'))
     {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = MinigunEnforcerMaxAmmoAmount;
         AmmoPickup.AmmoAmount = MinigunAmmoPickupAmount;
-        return true;
+        return false;
     }
 
     // bio
-    else if (Other.IsA('UT_BioRifle')) {
+   else if (Other.IsA('UT_BioRifle'))
+   {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = BioRifleWeaponPickupAmmoAmount;
+        return false;
     }
-    else if (Other.IsA('BioAmmo')) {
+    else if (Other.IsA('BioAmmo'))
+    {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = BioRifleMaxAmmoAmount;
         AmmoPickup.AmmoAmount = BioRifleAmmoPickupAmount;
+        return false;
     }
 
     // shock
@@ -135,14 +140,14 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = ShockWeaponPickupAmmoAmount;
-        return true;
+        return false;
     }
     else if (Other.IsA('ShockCore'))
     {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = ShockMaxAmmoAmount;
         AmmoPickup.AmmoAmount = ShockAmmoPickupAmount;
-        return true;
+        return false;
     }
 
     // pulse
@@ -150,14 +155,14 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = PulseWeaponPickupAmmoAmount;
-        return true;
+        return false;
     }
     else if (Other.IsA('PAmmo'))
     {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = PulseMaxAmmoAmount;
         AmmoPickup.AmmoAmount = PulseAmmoPickupAmount;
-        return true;
+        return false;
     }
 
     // ripper
@@ -165,14 +170,14 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = RipperWeaponPickupAmmoAmount;
-        return true;
+        return false;
     }
     else if (Other.IsA('BladeHopper'))
     {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = RipperMaxAmmoAmount;
         AmmoPickup.AmmoAmount = RipperMaxAmmoAmount;
-        return true;
+        return false;
     }
 
     // Flak
@@ -180,14 +185,14 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = FlakWeaponPickupAmmoAmount;
-        return true;
+        return false;
     }
     else if (Other.IsA('FlakAmmo'))
     {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = FlakMaxAmmoAmount;
         AmmoPickup.AmmoAmount = FlakAmmoPickupAmount;
-        return true;
+        return false;
     }
 
     // Rockets
@@ -195,14 +200,14 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = RocketLauncherWeaponPickupAmmoAmount;
-        return true;
+        return false;
     }
     else if (Other.IsA('RocketPack'))
     {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = RocketLauncherMaxAmmoAmount;
         AmmoPickup.AmmoAmount = RocketLauncherAmmoPickupAmount;
-        return true;
+        return false;
     }
 
     // Sniper
@@ -210,14 +215,14 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = SniperWeaponPickupAmmoAmount;
-        return true;
+        return false;
     }
     else if (Other.IsA('BulletBox'))
     {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = SniperMaxAmmoAmount;
         AmmoPickup.AmmoAmount = SniperAmmoPickupAmount;
-        return true;
+        return false;
     }
 
     return Super.CheckReplacement(Other, bSuperRelevant);
