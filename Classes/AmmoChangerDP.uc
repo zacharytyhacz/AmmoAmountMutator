@@ -1,4 +1,4 @@
-class AmmoChangerDPV1 extends Mutator config(AmmoChangerDP);
+class AmmoChangerDP extends Mutator config(AmmoChangerDP);
 
 
 // Enforcer
@@ -102,7 +102,7 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = MinigunEnforcerMaxAmmoAmount;
         AmmoPickup.AmmoAmount = EnforcerAmmoPickupAmount;
-        return false;
+		return false;
     }
 
     // minigun
@@ -121,18 +121,16 @@ function bool CheckReplacement(Actor Other, out byte bSuperRelevant)
     }
 
     // bio
-   else if (Other.IsA('UT_BioRifle'))
-   {
+    else if (Other.IsA('UT_BioRifle')) {
         WeaponPickup = Weapon(Other);
         WeaponPickup.PickupAmmoCount = BioRifleWeaponPickupAmmoAmount;
-        return false;
+		return false;
     }
-    else if (Other.IsA('BioAmmo'))
-    {
+    else if (Other.IsA('BioAmmo')) {
         AmmoPickup = Ammo(Other);
         AmmoPickup.MaxAmmo = BioRifleMaxAmmoAmount;
         AmmoPickup.AmmoAmount = BioRifleAmmoPickupAmount;
-        return false;
+		return false;
     }
 
     // shock

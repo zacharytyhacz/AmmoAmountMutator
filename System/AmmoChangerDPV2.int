@@ -1,0 +1,2 @@
+[Public]
+Object=(Name=AmmoChangerDPV2.AmmoChangerDP,Class=Class,MetaClass=Engine.Mutator,Description="Ammo Changer Mutator")
