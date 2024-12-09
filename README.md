@@ -9,7 +9,7 @@ Allows configuring of default weapon pickup ammo amount, ammo pickup amount, and
 
 ### Default INI Configuration
 ```ini
-[AmmoChangerDPV2.AmmoChangerDP]
+[AmmoChangerDPV3.AmmoChangerDP]
 EnforcerWeaponPickupAmount=30
 EnforcerAmmoPickupAmount=20
 
